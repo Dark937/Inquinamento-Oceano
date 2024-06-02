@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="img/favicon.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/e2ec210445.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <title>Inquinamento nell'Oceano</title>
+</head>
+  <div class="custom-loader-mask">
+      <div class="custom-loader"></div>
+  </div>
+  <div class="montagna1"></div>
+  <div class="montagna2"></div>
+  <div class="nuv-ucc"></div>
+  <div class="petrolio"></div>
+  <div class="barca"></div>
+  <div class="busta1"></div>
+  <div class="busta2"></div>
+  <div class="busta3"></div>
+  <div class="bottiglia1"></div>
+  <div class="bottiglia2"></div>
+  <div class="bottiglia3"></div>
+  <div class="text-bg"></div>
+  <div class="barili">
+    <div class="text-1"><img src="./img/petrolio1.jpg"> <p>Il petrolio rappresenta una grave minaccia per gli ecosistemi marini a causa degli sversamenti accidentali e delle perdite durante l'estrazione e il trasporto. Queste contaminazioni danneggiano la vita marina, compromettono la catena alimentare e richiedono interventi di pulizia costosi e a lungo termine. È essenziale adottare misure preventive e tecnologie sicure per proteggere gli oceani e preservare la salute degli ecosistemi marini.</p></div>
+  <div class="back-1"><i class="fa-solid fa-circle-arrow-left"></i> Indietro</div></div>
+  <div class="barche">
+    <div class="text-2"><img src="./img/barche1.jpg"> <p>I residui lasciati dalle barche, come i gas di scarico, contribuiscono all'inquinamento atmosferico e marino. Queste emissioni dannose possono avere effetti negativi sulla qualità dell'aria e sull'ecosistema marino, compromettendo la salute della fauna marina e influenzando il clima globale. È importante adottare misure per ridurre le emissioni nocive delle imbarcazioni, proteggere gli oceani e preservare l'ambiente marino per le generazioni future.</p></div>
+  <div class="back-2"><i class="fa-solid fa-circle-arrow-left"></i> Indietro</div></div>
+  <div class="forocean">
+    <div class="text-3"><img src="./img/4ocean.jpg"> <p>4-Ocean è un'organizzazione senza scopo di lucro che si impegna nella pulizia degli oceani e nella rimozione dei rifiuti plastici. L'organizzazione si dedica a rimuovere bottiglie di plastica, reti da pesca abbandonate e altri rifiuti marini dai mari dalle spiagge di tutto il mondo. 4- Ocean lavora anche per sensibilizzare l'opinione pubblica sull'importanza di proteggere gli oceani e di ridurre l'inquinamento da plastica.</p></div>
+  <div class="back-3"><i class="fa-solid fa-circle-arrow-left"></i> Indietro</div></div>
+  <div class="plastica">
+    <div class="text-4"><img src="./img/plastica.jpg"> <p>Le plastiche nell'oceano rappresentano una grave minaccia per la vita marina e gli ecosistemi marini. L'inquinamento da plastica danneggia gli animali marini che ingeriscono frammenti di plastica, compromettendo la catena alimentare e rilasciando sostanze tossiche nell'ambiente. È fondamentale adottare misure per ridurre l'utilizzo di plastica monouso e promuovere il riciclo per proteggere gli oceani e la biodiversità marina.</p></div>
+  <div class="back-4"><i class="fa-solid fa-circle-arrow-left"></i> Indietro</div></div>
+  <div id="messaggio">Cliccalo!</div>
+  <div id="bg"></div>
+  <script>
+    jQuery(function($) {
+      setTimeout(function() {
+        $('.custom-loader-mask').fadeOut('slow');
+      }, 5000);
+    });
+    const textBg = document.querySelector('.text-bg');
+    const back1 = document.querySelector('.back-1');
+    const back2 = document.querySelector('.back-2');
+    const back3 = document.querySelector('.back-3');
+    const back4 = document.querySelector('.back-4');
+    const petrolio = document.querySelector('.petrolio');
+    const barili = document.querySelector('.barili');
+    const barca = document.querySelector('.barca');
+    const barche = document.querySelector('.barche');
+    const bottiglia1 = document.querySelector('.bottiglia1');
+    const bottiglia2 = document.querySelector('.bottiglia2');
+    const bottiglia3 = document.querySelector('.bottiglia3');
+    const forocean = document.querySelector('.forocean');
+    const plastica = document.querySelector('.plastica');
+    const busta1 = document.querySelector('.busta1');
+    const busta2 = document.querySelector('.busta2');
+    const busta3 = document.querySelector('.busta3');
+
+    let timeoutId = null;
+    let messaggioDiv = document.querySelector('#messaggio');
+
+    petrolio.addEventListener('mouseover', function() {
+      timeoutId = setTimeout(function() {
+        messaggioDiv.style.opacity = '1';
+        messaggioDiv.style.transform = 'scale(1)';
+        messaggioDiv.classList.add('animate');
+      }, 1000);
+    });
+
+    petrolio.addEventListener('mouseout', function() {
+      clearTimeout(timeoutId);
+      messaggioDiv.style.transform = 'scale(0)';
+      messaggioDiv.style.opacity = '0';
+    });
+
+    barca.addEventListener('mouseover', function() {
+      timeoutId = setTimeout(function() {
+        messaggioDiv.style.opacity = '1';
+        messaggioDiv.style.transform = 'scale(1)';
+        messaggioDiv.classList.add('animate');
+      }, 1000);
+    });
+
+    barca.addEventListener('mouseout', function() {
+      clearTimeout(timeoutId);
+      messaggioDiv.style.transform = 'scale(0)';
+      messaggioDiv.style.opacity = '0';
+    });
+
+    busta1.addEventListener('mouseover', function() {
+      timeoutId = setTimeout(function() {
+        messaggioDiv.style.opacity = '1';
+        messaggioDiv.style.transform = 'scale(1)';
+        messaggioDiv.classList.add('animate');
+      }, 1000);
+    });
+
+    busta1.addEventListener('mouseout', function() {
+      clearTimeout(timeoutId);
+      messaggioDiv.style.transform = 'scale(0)';
+      messaggioDiv.style.opacity = '0';
+    });
+
+    busta2.addEventListener('mouseover', function() {
+      timeoutId = setTimeout(function() {
+        messaggioDiv.style.opacity = '1';
+        messaggioDiv.style.transform = 'scale(1)';
+        messaggioDiv.classList.add('animate');
+      }, 1000);
+    });
+
+    busta2.addEventListener('mouseout', function() {
+      clearTimeout(timeoutId);
+      messaggioDiv.style.transform = 'scale(0)';
+      messaggioDiv.style.opacity = '0';
+    });
+
+    busta3.addEventListener('mouseover', function() {
+      timeoutId = setTimeout(function() {
+        messaggioDiv.style.opacity = '1';
+        messaggioDiv.style.transform = 'scale(1)';
+        messaggioDiv.classList.add('animate');
+      }, 1000);
+    });
+
+    busta3.addEventListener('mouseout', function() {
+      clearTimeout(timeoutId);
+      messaggioDiv.style.transform = 'scale(0)';
+      messaggioDiv.style.opacity = '0';
+    });
+
+    bottiglia1.addEventListener('mouseover', function() {
+      timeoutId = setTimeout(function() {
+        messaggioDiv.style.opacity = '1';
+        messaggioDiv.style.transform = 'scale(1)';
+        messaggioDiv.classList.add('animate');
+      }, 1000);
+    });
+
+    bottiglia1.addEventListener('mouseout', function() {
+      clearTimeout(timeoutId);
+      messaggioDiv.style.transform = 'scale(0)';
+      messaggioDiv.style.opacity = '0';
+    });
+
+    bottiglia2.addEventListener('mouseover', function() {
+      timeoutId = setTimeout(function() {
+        messaggioDiv.style.opacity = '1';
+        messaggioDiv.style.transform = 'scale(1)';
+        messaggioDiv.classList.add('animate');
+      }, 1000);
+    });
+
+    bottiglia2.addEventListener('mouseout', function() {
+      clearTimeout(timeoutId);
+      messaggioDiv.style.transform = 'scale(0)';
+      messaggioDiv.style.opacity = '0';
+    });
+
+    bottiglia3.addEventListener('mouseover', function() {
+      timeoutId = setTimeout(function() {
+        messaggioDiv.style.opacity = '1';
+        messaggioDiv.style.transform = 'scale(1)';
+        messaggioDiv.classList.add('animate');
+      }, 1000);
+    });
+
+    bottiglia3.addEventListener('mouseout', function() {
+      clearTimeout(timeoutId);
+      messaggioDiv.style.transform = 'scale(0)';
+      messaggioDiv.style.opacity = '0';
+    });
+
+    petrolio.addEventListener('click', () => {
+      textBg.style.display = 'block';
+      barili.style.display = 'block';
+      document.body.style.overflowY = 'hidden'; // Blocca lo scorrimento della pagina
+      window.scrollTo(0, 0); // Riporta la pagina in alto
+    });
+
+    back1.addEventListener('click', () => {
+      textBg.style.display = 'none';
+      barili.style.display = 'none';
+      document.body.style.overflowY = 'scroll'; // Riabilita lo scorrimento della pagina
+    });
+    barca.addEventListener('click', () => {
+      textBg.style.display = 'block';
+      barche.style.display = 'block';
+      document.body.style.overflowY = 'hidden'; // Blocca lo scorrimento della pagina
+      window.scrollTo(0, 0); // Riporta la pagina in alto
+    });
+
+    back2.addEventListener('click', () => {
+      textBg.style.display = 'none';
+      barche.style.display = 'none';
+      document.body.style.overflowY = 'scroll'; // Riabilita lo scorrimento della pagina
+    });
+    
+    bottiglia1.addEventListener('click', () => {
+      textBg.style.display = 'block';
+      forocean.style.display = 'block';
+      document.body.style.overflowY = 'hidden'; // Blocca lo scorrimento della pagina
+      window.scrollTo(0, 0); // Riporta la pagina in alto
+    });
+    bottiglia2.addEventListener('click', () => {
+      textBg.style.display = 'block';
+      forocean.style.display = 'block';
+      document.body.style.overflowY = 'hidden'; // Blocca lo scorrimento della pagina
+      window.scrollTo(0, 0); // Riporta la pagina in alto
+    });
+    bottiglia3.addEventListener('click', () => {
+      textBg.style.display = 'block';
+      forocean.style.display = 'block';
+      document.body.style.overflowY = 'hidden'; // Blocca lo scorrimento della pagina
+      window.scrollTo(0, 0); // Riporta la pagina in alto
+    });
+
+    back3.addEventListener('click', () => {
+      textBg.style.display = 'none';
+      forocean.style.display = 'none';
+      document.body.style.overflowY = 'scroll'; // Riabilita lo scorrimento della pagina
+    });
+
+    busta1.addEventListener('click', () => {
+      textBg.style.display = 'block';
+      plastica.style.display = 'block';
+      document.body.style.overflowY = 'hidden'; // Blocca lo scorrimento della pagina
+      window.scrollTo(0, 0); // Riporta la pagina in alto
+    });
+    busta2.addEventListener('click', () => {
+      textBg.style.display = 'block';
+      plastica.style.display = 'block';
+      document.body.style.overflowY = 'hidden'; // Blocca lo scorrimento della pagina
+      window.scrollTo(0, 0); // Riporta la pagina in alto
+    });
+    busta3.addEventListener('click', () => {
+      textBg.style.display = 'block';
+      plastica.style.display = 'block';
+      document.body.style.overflowY = 'hidden'; // Blocca lo scorrimento della pagina
+      window.scrollTo(0, 0); // Riporta la pagina in alto
+    });
+
+    back4.addEventListener('click', () => {
+      textBg.style.display = 'none';
+      plastica.style.display = 'none';
+      document.body.style.overflowY = 'scroll'; // Riabilita lo scorrimento della pagina
+    });
+  </script>
+<body>
+  <div id="page"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const nuvUcc = document.querySelector('.nuv-ucc');
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+
+      window.addEventListener('scroll', function() {
+        let scrollPercentage = (window.scrollY / maxScroll) * 100;
+        let translateY = 1 + (scrollPercentage * 0.5);
+        translateY = Math.max(0, translateY);
+
+        nuvUcc.style.transform = `translateY(-${translateY}vw)`;
+      });
+      const montagna1 = document.querySelector('.montagna1');
+      window.addEventListener('scroll', function() {
+        let scrollPercentage = (window.scrollY / maxScroll) * 100;
+        let translateX = 1 + (scrollPercentage * 0.5);
+        translateX = Math.max(0, translateX);
+        montagna1.style.transform = `translateX(-${translateX}vw)`;
+      });
+      const montagna2 = document.querySelector('.montagna2');
+      window.addEventListener('scroll', function() {
+        let scrollPercentage = (window.scrollY / maxScroll) * 100;
+        let translateX = 1 + (scrollPercentage * 0.6);
+        translateX = Math.max(0, translateX);
+        montagna2.style.transform = `translateX(${translateX}vw)`;
+      });
+      const title = document.querySelector('#title');
+      window.addEventListener('scroll', function() {
+        let scrollPercentage = (window.scrollY / maxScroll) * 100;
+        let translateY = 1 + (scrollPercentage * 0.725);
+        translateY = Math.max(0, translateY);
+
+        title.style.transform = `translateY(${translateY}vw)`;
+      });
+    });
+  </script>
+</body>
+  <div id="ocean"></div>
+  <svg id="title" viewBox="0 0 100 20">
+      <defs>
+          <linearGradient id="gradient">
+              <stop color="#f2f2f2"/>
+          </linearGradient>
+          <pattern id="wave" x="0" y="-0.5" width="100%" height="100%" patternUnits="userSpaceOnUse">
+              <path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z" mask="url(#mask)" fill="url(#gradient)"> 
+                  <animateTransform
+                      attributeName="transform"
+                      begin="0s"
+                      dur="1.5s"
+                      type="translate"
+                      from="0,0"
+                      to="40,0"
+                      repeatCount="indefinite" />
+              </path>
+          </pattern>
+      </defs>
+      <text text-anchor="middle" x="50" y="12" font-size="40%" fill="white" fill-opacity="0.1">L'inquinamento nell'oceano</text>
+      <text text-anchor="middle" x="50" y="12" font-size="40%" fill="url(#wave)"  fill-opacity="1">L'inquinamento nell'oceano</text>
+  </svg>
+</html>
