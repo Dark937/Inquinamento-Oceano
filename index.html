@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/x-icon" href="img/favicon.jpg">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://kit.fontawesome.com/e2ec210445.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -25,25 +25,25 @@
   <div class="bottiglia2"></div>
   <div class="bottiglia3"></div>
   <div class="text-bg"></div>
-  <div class="barili">
-    <div class="text-1"><img src="./img/petrolio1.jpg"> <p>Il petrolio rappresenta una grave minaccia per gli ecosistemi marini a causa degli sversamenti accidentali e delle perdite durante l'estrazione e il trasporto. Queste contaminazioni danneggiano la vita marina, compromettono la catena alimentare e richiedono interventi di pulizia costosi e a lungo termine. È essenziale adottare misure preventive e tecnologie sicure per proteggere gli oceani e preservare la salute degli ecosistemi marini.</p></div>
+  <div class="barili" id="barili-content">
+    <div class="text-1"><img src="./img/petrolio1.jpg"> <p>Il petrolio rappresenta una seria minaccia per gli ecosistemi costieri a causa dei rovesciamenti accidentali e delle perdite durante le operazioni di estrazione e trasporto. Questi inquinanti danneggiano la biodiversità marina, compromettendo la catena alimentare e richiedendo costose operazioni di pulizia a lungo termine. La presenza di petrolio nei mari e negli oceani può avere effetti devastanti sui pesci, gli uccelli marini e altri organismi marini, compromettendo la salute degli ecosistemi acquatici e la sostenibilità delle risorse ittiche.</p></div>
   <div class="back-1"><i class="fa-solid fa-circle-arrow-left"></i> Indietro</div></div>
   <div class="barche">
-    <div class="text-2"><img src="./img/barche1.jpg"> <p>I residui lasciati dalle barche, come i gas di scarico, contribuiscono all'inquinamento atmosferico e marino. Queste emissioni dannose possono avere effetti negativi sulla qualità dell'aria e sull'ecosistema marino, compromettendo la salute della fauna marina e influenzando il clima globale. È importante adottare misure per ridurre le emissioni nocive delle imbarcazioni, proteggere gli oceani e preservare l'ambiente marino per le generazioni future.</p></div>
+    <div class="text-2"><img src="./img/barche1.jpg"> <p>Le emissioni provenienti dalle imbarcazioni, incluse quelle dei gas di scarico, costituiscono una delle principali fonti di inquinamento che affligge sia l'ambiente marino che atmosferico. Queste sostanze nocive possono generare conseguenze avverse sulla purezza dell'aria e sull'equilibrio degli ecosistemi marini, mettendo a rischio la salute degli organismi marini e contribuendo all'alterazione del clima a livello globale.</p></div>
   <div class="back-2"><i class="fa-solid fa-circle-arrow-left"></i> Indietro</div></div>
   <div class="forocean">
-    <div class="text-3"><img src="./img/4ocean.jpg"> <p>4-Ocean è un'organizzazione senza scopo di lucro che si impegna nella pulizia degli oceani e nella rimozione dei rifiuti plastici. L'organizzazione si dedica a rimuovere bottiglie di plastica, reti da pesca abbandonate e altri rifiuti marini dai mari dalle spiagge di tutto il mondo. 4- Ocean lavora anche per sensibilizzare l'opinione pubblica sull'importanza di proteggere gli oceani e di ridurre l'inquinamento da plastica.</p></div>
+    <div class="text-3"><img src="./img/4ocean.jpg"> <p>4-Ocean è un'organizzazione senza scopo di lucro che si impegna nella pulizia degli oceani e nella rimozione dei rifiuti plastici. L'organizzazione si dedica a rimuovere bottiglie di plastica, reti da pesca abbandonate e altri rifiuti marini dai mari dalle spiagge di tutto il mondo. 4-Ocean lavora anche per sensibilizzare l'opinione pubblica sull'importanza di proteggere gli oceani e di ridurre l'inquinamento da plastica.</p></div>
   <div class="back-3"><i class="fa-solid fa-circle-arrow-left"></i> Indietro</div></div>
   <div class="plastica">
-    <div class="text-4"><img src="./img/plastica.jpg"> <p>Le plastiche nell'oceano rappresentano una grave minaccia per la vita marina e gli ecosistemi marini. L'inquinamento da plastica danneggia gli animali marini che ingeriscono frammenti di plastica, compromettendo la catena alimentare e rilasciando sostanze tossiche nell'ambiente. È fondamentale adottare misure per ridurre l'utilizzo di plastica monouso e promuovere il riciclo per proteggere gli oceani e la biodiversità marina.</p></div>
+    <div class="text-4"><img src="./img/plastica.jpg"> <p>La diffusione crescente di rifiuti di plastica nei mari e negli oceani rappresenta una minaccia sempre più grave per la vita marina e gli ecosistemi marini. Questo inquinamento plastico dannoso non solo compromette la catena alimentare marina, ma anche altera gli habitat naturali e introduce sostanze tossiche che possono persistere a lungo nell'ambiente marino, causando danni a lungo termine alla fauna e alla flora acquatica.</p></div>
   <div class="back-4"><i class="fa-solid fa-circle-arrow-left"></i> Indietro</div></div>
-  <div id="messaggio">Cliccalo!</div>
+  <div id="messaggio">Premilo!</div>
   <div id="bg"></div>
   <script>
     jQuery(function($) {
       setTimeout(function() {
         $('.custom-loader-mask').fadeOut('slow');
-      }, 5000);
+      }, 6000);
     });
     const textBg = document.querySelector('.text-bg');
     const back1 = document.querySelector('.back-1');
@@ -65,7 +65,7 @@
 
     let timeoutId = null;
     let messaggioDiv = document.querySelector('#messaggio');
-
+    
     petrolio.addEventListener('mouseover', function() {
       timeoutId = setTimeout(function() {
         messaggioDiv.style.opacity = '1';
@@ -254,6 +254,43 @@
     });
   </script>
 <body>
+  <script>
+      // Disabilita il doppio tap per zoomare su iOS
+      document.addEventListener('touchstart', function(event) {
+          if (event.touches.length > 1) {
+              event.preventDefault();
+          }
+      }, { passive: false });
+
+      // Disabilita lo zoom tramite pinch su iOS
+      document.addEventListener('gesturestart', function(event) {
+          event.preventDefault();
+      });
+
+      // Rimuovi la capacità di ingrandire utilizzando la tastiera
+      document.addEventListener('keydown', function(event) {
+          if ((event.ctrlKey || event.metaKey) && (event.key === '+' || event.key === '-' || event.key === '0')) {
+              event.preventDefault();
+          }
+      });
+
+      // Impedisci lo zoom su Android
+      document.addEventListener('wheel', function(event) {
+          if (event.ctrlKey) {
+              event.preventDefault();
+          }
+      }, { passive: false });
+
+      // Assicurati che lo zoom rimanga bloccato (per browser che supportano solo meta tag)
+      var viewportMeta = document.querySelector('meta[name="viewport"]');
+      function disableZoom() {
+          if (viewportMeta) {
+              viewportMeta.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no';
+          }
+      }
+      disableZoom();
+      window.addEventListener('resize', disableZoom);
+  </script>
   <div id="page"></div>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
