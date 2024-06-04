@@ -8,6 +8,21 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://kit.fontawesome.com/e2ec210445.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <style>
+    body {
+        -webkit-user-select: none; /* Safari */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Standard */
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.addEventListener('copy', (e) => {
+            e.preventDefault();
+        });
+    });
+  </script>
     <title>Inquinamento nell'Oceano</title>
 </head>
   <div class="custom-loader-mask">
